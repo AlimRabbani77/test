@@ -1,0 +1,56 @@
+#Stack 
+def bikin_stack () :
+		stack = [48,49,50]
+		return stack
+		
+def periksa_empty ( stack ) :
+		return len (stack) == 0
+		
+def push ( stack,item ):
+		stack.append (item)
+		print ("jumlah  barang-barang yang ada:",item)
+		
+def pop (stack) :
+		if (periksa_empty (stack)) :
+			return print ("ukuran barang pada rak")
+		print ("ukuran barang yang diambil:",stack.pop())
+		
+def size (stack) :
+		print ("jumlah barang yang ada pada rak:" ,len(stack))
+		
+def top (stack):
+		top = len (stack) -1
+		if top < 0 :
+			print (" tidak terdefenisi")
+		else :
+			print ("ukuran barang yang teratas:" , stack [top])
+			
+def tampilkan (stack) :
+		print (stack)
+		
+			
+s = bikin_stack ()
+print (" tumpukan ukuran barang pada rak ")
+
+
+#Data awal stack
+print ("ukuran barang yang yang berada pada tumpukan saat ini:  ",s) 
+
+size (s)
+top (s)
+print ()
+
+#Meminjam ukuran barang
+pop (s)
+pop (s)
+pop (s)
+print ("ukuran barang yang yang berada pada tumpukan saat ini:  ",s) 
+top (s)
+size (s)
+print ()
+
+#Mengembalikan ukuran barang
+push (s,input())
+push (s,input())
+push (s,input ())
+print ("ukuran barang yang yang berada pada tumpukan saat ini:  ",s)
